@@ -1,0 +1,244 @@
+/* General Body Styles */
+body {
+    background-color: #2B2D2F;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    align-items: center;
+    color: white;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 36px;
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+}
+
+.bookCount {
+    font-size: 18px;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Book Card Styles */
+.bookCard {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    height: 280px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    position: relative; /* Ensures buttons inside stay aligned */
+}
+
+.bookCard.read {
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+}
+
+.bookCard.unread {
+    background-color: grey;
+}
+
+/* Book Text Layout */
+.card-text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-text strong {
+    font-size: 18px; /* Larger font size for title */
+    font-weight: 900; /* Bolded title */
+}
+
+/* Card Buttons */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.card-actions button {
+    flex: 1; /* Ensure buttons take equal width */
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.toggle-read {
+    background: #6f6f6f;
+    color: white;
+}
+
+.toggle-read:hover {
+    background: #5f5f5f;
+}
+
+.remove-book {
+    background: #ff4d4d;
+    color: white;
+}
+
+.remove-book:hover {
+    background: #cc0000;
+}
+
+/* Fixed Button */
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7F00FF;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fixed-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fixed-button:active {
+    transform: translateY(0);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal-content label {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="checkbox"] {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.modal-content .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.modal-content .checkbox-container label {
+    margin-left: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#cancelButton {
+    background: #ccc;
+    color: #333;
+}
+
+#cancelButton:hover {
+    background: #bbb;
+}
+
+.modal-buttons button[type="submit"] {
+    background: #7F00FF;
+    color: white;
+}
+
+.modal-buttons button[type="submit"]:hover {
+    background: #5900b3;
+}
+
+.haveyouread {
+    display: flex;
+    align-items: center;
+}
